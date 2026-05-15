@@ -15,16 +15,14 @@ export function Banner({ defaultOpen, onDismiss }: Props) {
   }
 
   return (
-    <div className="relative full text-xs border border-dashed border-yellow-500 bg-yellow-100 py-2 pl-2 pr-8">
-      <strong>Vercel Coding Agent demo</strong> This demo showcases a full-stack
-      coding agent built with Vercel&apos;s AI Cloud, AI SDK, and Next.js This
-      example gives you full flexibility of the underlying model via Vercel AI
-      Gateway and code execution via Vercel Sandbox. For a drop-in, higher-level
-      solution for adding vibe coding capabilities to your applications, check
-      out the v0 Platform API.
+    <div className="relative w-full text-xs border border-dashed border-violet-500/40 bg-gradient-to-r from-violet-500/10 via-fuchsia-500/10 to-pink-500/10 py-2 pl-3 pr-8 font-mono">
+      <span className="font-bold bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent">ZARTEX AI</span>
+      {' '}— An agentic coding platform. Enter a prompt, get a running full-stack app.
+      Powered by Claude, GPT &amp; Grok · Hosted at{' '}
+      <a href="https://ai.zartex.tech" className="underline underline-offset-2 text-fuchsia-500">ai.zartex.tech</a>
       <button
         aria-label="Close Banner"
-        className="absolute top-2 right-2 text-yellow-700 hover:text-yellow-900 transition-colors cursor-pointer"
+        className="absolute top-2 right-2 text-fuchsia-500 hover:text-fuchsia-300 transition-colors cursor-pointer"
         onClick={() => {
           onDismiss()
           setOpen(false)

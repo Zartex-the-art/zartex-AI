@@ -1,5 +1,4 @@
 import { ToggleWelcome } from '@/components/modals/welcome'
-import { VercelDashed } from '@/components/icons/vercel-dashed'
 import { cn } from '@/lib/utils'
 
 interface Props {
@@ -9,11 +8,16 @@ interface Props {
 export async function Header({ className }: Props) {
   return (
     <header className={cn('flex items-center justify-between', className)}>
-      <div className="flex items-center">
-        <VercelDashed className="ml-1 md:ml-2.5 mr-1.5" />
-        <span className="hidden md:inline text-sm uppercase font-mono font-bold tracking-tight">
-          OSS Vibe Coding Platform
+      <div className="flex items-center gap-2">
+        {/* ZARTEX wordmark */}
+        <span className="font-mono font-extrabold tracking-widest text-base uppercase bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent select-none">
+          ZARTEX
         </span>
+        <span className="hidden md:inline text-xs font-mono font-semibold uppercase tracking-tight text-muted-foreground">
+          AI Studio
+        </span>
+        <span className="hidden md:inline text-xs font-mono text-muted-foreground/50">·</span>
+        <span className="hidden md:inline text-xs font-mono text-muted-foreground/50">ai.zartex.tech</span>
       </div>
       <div className="flex items-center ml-auto space-x-1.5">
         <ToggleWelcome />

@@ -46,40 +46,28 @@ export function Welcome(props: {
           className="bg-background max-w-xl mx-4 rounded-lg shadow overflow-hidden"
           onClick={(event) => event.stopPropagation()}
         >
-          <div className="p-6 space-y-4 ">
-            <h1 className="text-2xl sans-serif font-semibold tracking-tight mb-7">
-              OSS Vibe Coding Platform
-            </h1>
+          <div className="p-6 space-y-4">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="font-mono font-extrabold tracking-widest text-2xl uppercase bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent">
+                ZARTEX
+              </span>
+              <span className="text-xl font-semibold tracking-tight">AI Studio</span>
+            </div>
             <p className="text-base text-primary">
-              This is a <strong>demo</strong> of an end-to-end coding platform
-              where the user can enter text prompts, and the agent will create a
-              full stack application.
+              Welcome to <strong>ZARTEX AI</strong> — your agentic coding platform.
+              Enter a text prompt and our AI agent will scaffold and run a
+              complete full-stack application in seconds.
             </p>
             <p className="text-base text-secondary-foreground">
-              It uses Vercel&apos;s AI Cloud services like{' '}
-              <ExternalLink href="https://vercel.com/docs/vercel-sandbox">
-                Sandbox
-              </ExternalLink>{' '}
-              for secure code execution,{' '}
-              <ExternalLink href="https://vercel.com/docs/ai-gateway">
-                AI Gateway
-              </ExternalLink>{' '}
-              for Claude, GPT, and Grok model support,{' '}
-              <ExternalLink href="https://vercel.com/fluid">
-                Fluid Compute
-              </ExternalLink>{' '}
-              for efficient rendering and streaming, and it&apos;s built with{' '}
-              <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink>{' '}
-              and the{' '}
-              <ExternalLink href="https://ai-sdk.dev/docs/introduction">
-                AI SDK
-              </ExternalLink>
-              .
+              Powered by frontier models (Claude, GPT, Grok) via AI Gateway,
+              with secure sandboxed code execution and real-time streaming.
+              Built with Next.js and the AI SDK — hosted at{' '}
+              <ExternalLink href="https://ai.zartex.tech">ai.zartex.tech</ExternalLink>.
             </p>
           </div>
           <footer className="bg-secondary flex justify-end p-4 border-t border-border">
             <Button className="cursor-pointer" onClick={handleDismiss}>
-              Try now
+              Start building
             </Button>
           </footer>
         </div>
@@ -97,7 +85,7 @@ export function ToggleWelcome() {
       variant="outline"
       size="sm"
     >
-      <InfoIcon /> <span className="hidden lg:inline">What&apos;s this?</span>
+      <InfoIcon /> <span className="hidden lg:inline">About ZARTEX AI</span>
     </Button>
   )
 }
